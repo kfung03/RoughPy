@@ -25,7 +25,7 @@ WORKDIR /tools
 
 # Create new venv at container root and install libs
 RUN python3 -m venv /tools/venv
-ENV PATH /tools/venv/bin:$PATH
+ENV PATH=/tools/venv/bin:$PATH
 RUN pip install --upgrade pip setuptools wheel
 RUN pip install \
     cmake \
